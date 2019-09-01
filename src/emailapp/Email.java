@@ -31,14 +31,12 @@ public class Email {
         email = firstName.toLowerCase() + lastName.toLowerCase() + "@" + department + "." + companySuffix;
         System.out.println("Your email is: " + email);
 
-
-
-
     }
 
     //	Ask for the department
     private String setDepartment() {
-        System.out.print("New worker: " + firstName + ".Department codes\n1 for Sales\n2 for Development\n3 for Accounting\n0 for none\nEnter department code: ");
+        System.out.print("New worker: " + firstName + ".Department codes\n1 for Sales" +
+                                         "\n2 for Development\n3 for Accounting\n0 for none\nEnter department code: ");
         Scanner in = new Scanner(System.in);
         int depChoice = in.nextInt();
         if(depChoice ==1) {return "Sales"; }
@@ -50,7 +48,7 @@ public class Email {
 
     //	Generate random password
     private String randomPassword(int length) {
-        String passwordSet = "ABCDEFGHIKLMNOPQRSTUVWXYZ0123456789~!@#$%^&*";
+        String passwordSet = "ABCDEFGHIKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~!@#$%^&*";
         char [] password =  new char[length];
         for (int i = 0; i < length; i++) {
             int rand = (int) (Math.random() * passwordSet.length());
